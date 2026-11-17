@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curriculum Vitae – Imelda Zapana Flores</title>
+  <style>
+:root {
+  --verde: #1f5f4a;
+  --verde-claro: #e6f1ed;
+  --texto: #25302c;
+  --gris: #6b7773;
+  --fondo: #eef1ef;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.55;
+  padding: 24px 12px;
+}
+
+.cv {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .12);
+  overflow: hidden;
+}
+
+/* Cabecera */
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--verde);
+  color: #fff;
+  padding: 28px 36px;
+}
+
+.foto {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  flex-shrink: 0;
+}
+
+.cabecera h1 {
+  font-size: .95rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: .85;
+}
+
+.nombre { font-size: 2rem; font-weight: 700; line-height: 1.2; margin: 4px 0; }
+.subtitulo { font-size: 1rem; opacity: .9; }
+
+/* Secciones */
+section { padding: 22px 36px 6px; }
+section:last-of-type { padding-bottom: 30px; }
+
+h2 {
+  color: var(--verde);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid var(--verde);
+  padding-bottom: 5px;
+  margin-bottom: 14px;
+}
+
+/* Datos personales */
+.datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 28px;
+}
+
+.datos dt {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  color: var(--gris);
+}
+
+.datos dd { font-weight: 600; word-break: break-word; }
+.datos a { color: var(--verde); text-decoration: none; }
+.datos a:hover { text-decoration: underline; }
+
+/* Formación */
+.lineas { list-style: none; }
+.lineas > li { margin-bottom: 10px; }
+.lineas ul { margin: 6px 0 0 22px; }
+.lineas ul li { list-style: disc; color: var(--texto); }
+.lineas em { color: var(--verde); font-weight: 600; }
+
+/* Certificados */
+.certificados { list-style: none; }
+
+.certificados li {
+  position: relative;
+  padding: 8px 8px 8px 20px;
+  border-bottom: 1px dashed #d5dcd9;
+}
+
+.certificados li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 16px;
+  width: 7px;
+  height: 7px;
+  background: var(--verde);
+  border-radius: 50%;
+}
+
+.horas {
+  display: inline-block;
+  background: var(--verde-claro);
+  color: var(--verde);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: 1px 9px;
+  border-radius: 20px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .cabecera { flex-direction: column; text-align: center; padding: 24px 20px; }
+  .nombre { font-size: 1.6rem; }
+  section { padding: 20px 20px 6px; }
+  .datos { grid-template-columns: 1fr; }
+}
+
+/* Impresión */
+@media print {
+  body { background: #fff; padding: 0; }
+  .cv { box-shadow: none; border-radius: 0; max-width: 100%; }
+  .cabecera { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .horas { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  section { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+  <main class="cv">
+
+    <header class="cabecera">
+      <img class="foto" src="foto.png" alt="Foto de Imelda Zapana Flores">
+      <div>
+        <h1>Curriculum Vitae</h1>
+        <p class="nombre">Imelda Zapana Flores</p>
+        <p class="subtitulo">Técnico en Producción Agropecuaria · Estudiante de APSTI</p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Datos personales</h2>
+      <dl class="datos">
+        <div><dt>Nombres</dt><dd>Imelda</dd></div>
+        <div><dt>Apellidos</dt><dd>Zapana Flores</dd></div>
+        <div><dt>Fecha de nacimiento</dt><dd>28/09/93</dd></div>
+        <div><dt>Nacionalidad</dt><dd>Peruano</dd></div>
+        <div><dt>Dirección</dt><dd>Jr. Deustua N° 1013 – Santa Lucía – Lampa</dd></div>
+        <div><dt>N° celular</dt><dd>983645374</dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:ramos.43510@gmail.com">ramos.43510@gmail.com</a></dd></div>
+        <div><dt>Idiomas</dt><dd>Español (habla, lee y escribe)</dd></div>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Formación académica</h2>
+      <ul class="lineas">
+        <li><strong>Educación primaria:</strong> I.E.P.P. “Glorioso N° 71009” – Santa Lucía</li>
+        <li><strong>Educación secundaria:</strong> I.E.P.S. “José Carlos Mariátegui” – Santa Lucía</li>
+        <li><strong>Educación superior:</strong> I.E.S.T. Público Santa Lucía
+          <ul>
+            <li><strong>Especialidad:</strong> Técnico en Producción Agropecuaria</li>
+            <li><strong>Grado:</strong> Profesional técnico en Agropecuaria – Egresado</li>
+          </ul>
+        </li>
+        <li><strong>Estudios actuales:</strong> Arquitectura de Plataformas y Servicios de Tecnologías de Información (APSTI) – <em>En curso</em>
+          <ul>
+            <li><strong>Institución:</strong> I.E.S.T. Público – Santa Lucía</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certificados de estudios superiores</h2>
+      <ul class="certificados">
+        <li>Título profesional técnico en Producción Agropecuaria</li>
+        <li>Certificado modular: Producción Agrícola <span class="horas">326.4 horas</span></li>
+        <li>Certificado modular: Producción Pecuaria <span class="horas">326.4 horas</span></li>
+        <li>Certificado modular: Protección Agropecuaria <span class="horas">163.2 horas</span></li>
+        <li>Certificado modular: Transformación, Gestión y Comercialización Agropecuaria <span class="horas">163.2 horas</span></li>
+        <li>“Producción y Comercialización de la Fibra de Alpaca – Santa Lucía” <span class="horas">8 horas</span></li>
+        <li>“V Congreso Regional de Estudiantes de Educación Superior Tecnología de Industrias Alimentarias y Producción Agropecuaria” <span class="horas">200 horas</span></li>
+        <li>“Capacitación Integral de Innovación en Producción, Reproducción, Mejoramiento Genético y Manejo Sostenible en Ganadería, Especies Alto Andinas y Acuáticas” <span class="horas">200 horas</span></li>
+        <li>“Técnicas Avanzadas, Conocimiento y Liderazgo en Agroindustrias” <span class="horas">200 horas</span></li>
+        <li>“Contribución al Futuro Sostenible en Sistemas Agropecuarios” <span class="horas">200 horas</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certificados pedagógicos</h2>
+      <ul class="certificados">
+        <li>“Ofimática” <span class="horas">80 horas</span></li>
+        <li>“Habilidades Blandas” <span class="horas">200 horas</span></li>
+        <li>“Desarrollo de Sistemas de Información” <span class="horas">200 horas</span></li>
+        <li>“Arquitectura de Plataformas y Servicios de Tecnología de la Información” <span class="horas">200 horas</span></li>
+        <li>“XIX Congreso Regional de Estudiantes de Educación Superior en Computación Informática” <span class="horas">200 horas</span></li>
+        <li>“Mantenimiento, Reparación, Ensamblaje de Computadoras y Administración de Redes” <span class="horas">200 horas</span></li>
+        <li>Radiación (RNI): Importancia de las Antenas de Telefonía Móvil y Uso Responsable de las Tecnologías de la Información y Comunicación (TIC) <span class="horas">24 horas</span></li>
+        <li>“Proyectos de Tecnología de la Información, Seguridad Informática y Cableado Estructurado” <span class="horas">100 horas</span></li>
+        <li>“Proyectos de Tecnología de la Información, Seguridad Informática y Cableado Estructurado” <span class="horas">80 horas</span></li>
+      </ul>
+    </section>
+
+  </main>
+</body>
+</html>
